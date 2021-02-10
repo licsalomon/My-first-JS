@@ -1,0 +1,30 @@
+html{
+	background-color:gray;
+}
+
+h1{
+	font-style:bold; 
+	font-size:700; 
+	color:white;
+}
+
+p{
+	color:white; 
+	font-size:180; 
+}
+
+table{
+	border-collapse:separate;
+	border-spacing:0 15px;
+}
+
+label{
+	color:white;
+}
+
+
+.labelcolumn{
+	font-style:bold;
+	color:white;
+	text-align:right;
+}

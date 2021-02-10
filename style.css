@@ -1,0 +1,29 @@
+body{
+  background-color: #FFF;
+}
+h1 {
+font-size: 80px;
+text-align: center ;
+color: blue;
+}
+
+table{
+  width:500px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+td{
+   padding: 5px;
+  word-wrap: break-word;
+}
+
+#fullpage{
+  margin: 100px;
+}
+
+.button{
+  margin: auto;
+  text-align: center;
+  width: 200px;
+}

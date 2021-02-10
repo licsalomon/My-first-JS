@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--I made this web during this course, and I was improving it untill today. Now I add a contact form, to still in touch with my partnes!-->
+
+	<link rel="stylesheet" type="text/css" href="syle1 2.css">
+	<title>My first template</title>
+<script type="text/javascript">
+	//My first js funtion
+	function alertasaludo () 
+	{
+		document.getElementById("para").innerHTML = "Have a nice day :)";
+		}
+//this funtion validate the form
+	function validateForm() {
+  		var x = document.forms["myForm"]["firtsName"].value;
+  		if (x == "") {
+   		 alert("Name must be filled out");
+    	return false;
+  		}
+	}//Thia funtion validate on blur the first name field.
+		function validateFirstName() {
+  		var x = document.getElementById("firtsName").value;
+  		if (x == "") {
+  			 document.getElementById("firstNamePrompt").style.color = "red";
+   			 document.getElementById("firstNamePrompt").innerHTML = "This field must be completed";
+    	return true;
+  		}
+  		else {
+  			document.getElementById("firstNamePrompt").style.color = "green";
+   		 	document.getElementById("firstNamePrompt").innerHTML = "Looks good!";
+    	return false;
+  			 
+  		}	
+	}
+
+
+</script>
+</head>
+<body>
+	<header>
+	<h1>This is my first web</h1>
+	<h2>I wish you luck in this course</h2>
+	</header>
+	<p>Hi everyone! My name is Laura and I´m learning <strong>Html</strong></p><br>
+	<img src="https://pixy.org/src/210/thumbs350/2106645.jpg" /> <br>
+
+	<button onclick="alertasaludo();" > Click to see a message for you</button>
+	<h3 id="para" style="color:green;"> </h3>
+
+	<br>
+	<br>
+	<form name="myForm" action="#" >
+		<h2>Contact me</h2>
+		<table border="0">
+			<tr>
+				<td class="label_col">Firts Name</td>
+				<td class="input_col"><input name="firtsName" required type="TEXT" id="firtsName" onblur="validateFirstName();"></td>
+				<td class="feedback_col"><p id="firstNamePrompt"></p></td>
+			</tr>
+			<tr>
+				<td class="label_col">Last Name</td>
+				<td class="input_col"><input name="lastName" required type="TEXT" id="lastName" ></td>
+				
+			</tr>
+			<tr>
+				<td class="label_col">Email</td>
+				<td class="input_col"><input name="email" type="email" id="email" required></td>
+			
+			</tr>
+			<tr>
+				<td class="label_col">Telephone</td>
+				<td class="input_col"><input name="Telephone" type="TEXT" id="Telephone" ></td>
+				
+			</tr>
+			<tr>
+				<td class="label_col">Gender</td>
+				<td class="input_col"><label for="male">Male</label><input name="gender" type="radio" id="male" value="male" required> <label for="female"> Female</label><input name="gender" type="radio" id="female" value="female" required><label for="other"> Other</label><input name="gender" type="radio" id="other" value="other" required></td>
+				
+			</tr>
+			<tr>
+				<td class="label_col">Suscribe?</td>
+				<td class="input_col"><input name="Suscribe" type="checkbox" id="Suscribe" ></td>
+				
+			</tr>
+			<tr>
+				<td class="label_col">Comments</td>
+				<td class="input_col"><textarea name="Comentarios" cols="35" rows="10"></textarea></td>
+				
+			</tr>
+			<tr>
+				<td><button onclick="return validateForm()">Send</button> </td> <!--this button just validate the form!-->
+				
+			</tr>
+		</table>
+</body>
+
+</html>
+
+
+
+
+
